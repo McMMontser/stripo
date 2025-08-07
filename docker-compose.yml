@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      STRIPE_API_KEY: "your-stripe-key"
+      SADAD_MERCHANT_ID: "your-sadad-merchant"
+      SADAD_API_KEY: "your-sadad-key"
+      PAYTABS_PROFILE_ID: "your-paytabs-profile"
+      PAYTABS_SERVER_KEY: "your-paytabs-key"
+      MOYASAR_API_KEY: "your-moyasar-key"
